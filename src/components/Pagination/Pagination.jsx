@@ -1,14 +1,23 @@
 import React from 'react';
 import classes from './Pagination.module.css'
 
-const Pagination = () => {
+const Pagination = ({usersPerPage, totalUsers, paginate, next, prev}) => {
+
+    const pageNumbers = []
+
+    for (let i = 1; i <= Math.ceil(totalUsers / usersPerPage); i++) {
+        pageNumbers.push(i)
+    }
+
     return (
         <div className={classes.pagination}>
-            <a href="/">Previous</a>
-            <a href="/">1</a>
-            <a className="active" href="/">2</a>
-            <a href="/">3</a>
-            <a href="/">Next</a>
+            <a href="!#" onClick={prev}>Previous</a>
+            {pageNumbers.map(number => (
+                <a href="!#"
+                   onClick={() => paginate(number)}
+                   key={number}>{number} </a>
+            ))}
+            <a href="!#" onClick={next}>Next</a>
         </div>
     );
 };
