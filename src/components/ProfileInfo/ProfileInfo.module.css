@@ -1,0 +1,11 @@
+.profileInfo {
+    list-style: none;
+    border: 1px solid black;
+    width: 600px;
+    text-align: center;
+    padding: 20px;
+}
+
+.profileInfo li {
+    margin: 10px;
+}

@@ -1,0 +1,9 @@
+.filterBar {
+    font-weight: bold;
+}
+
+select {
+    font-size: 10px;
+    border: none;
+    outline: none;
+}
